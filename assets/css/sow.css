@@ -1,29 +1,76 @@
 body {
-background-color:white
+  background-color: white;
+  font-family: Helvetica;
 }
 
 section {
-    height: 90vh
+  height: 500vh;
 }
 header {
-	background: #fff;
-	box-shadow: 0 2px 5px rgba(9, 240, 236, 0.1);
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(9, 240, 236, 0.1);
+  title {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em solid currentColor;
+    animation: typing 3s steps(30, end) forwards,
+      blink-caret 0.75s step-end infinite;
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes blink-caret {
+    50% {
+      border-color: transparent;
+    }
+  }
 }
 nav {
-	position: fixed;
-	top: 0;
-	z-index: 1000;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
 nav ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 nav ul li {
-	margin-right: 1rem;
+  margin-right: 1rem;
 }
 nav ul li a {
-	text-decoration: none;
-	color: #333;
+  text-decoration: none;
+  color: #791fc7;
+}
+html {
+  scroll-behavior: smooth;
+}
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #007acc;
+  outline: none;
+}
+
+.analysis-text {
+  max-width: 700px; /* ancho máximo del bloque de texto */
+  margin: 2rem auto; /* centra el bloque y añade espacio arriba/abajo */
+  padding: 0 1rem; /* espacio a los lados para que no pegue al borde */
+}
+
+.analysis-text p {
+  text-align: justify;
+}
+
+.analysis-text ul li {
+  text-align: justify;
+}
+
+.analysis-text ul li::marker {
+  color: #1fb6c7; /* Elige el color que prefieras */
 }
