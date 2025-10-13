@@ -24,14 +24,24 @@
     </header>
     <main>
       <section id="site-awwwards">
-        <h2>Awwwards</h2>
-        <iframe
-          src="https://immersive-g.com/"
-          title="Immersive garden"
-          width="100%"
-          height="400"
-          loading="lazy"
-        ></iframe>
+        <!-- Tarjeta para Awwwards -->
+        <div class="site-card">
+          <h2>Awwwards: Immersive Garden</h2>
+          <a href="https://immersive-g.com/" target="_blank">
+            <img
+              src="../assets/img/Untitled design (2).jpg"
+              alt="Awwwards"
+              class="site-thumb"
+            />
+          </a>
+        </div>
+
+        <!-- Modal para mostrar imagen grande y texto -->
+        <div id="modal" class="modal">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img id="modal-img" class="modal-content" />
+          <div id="modal-text"></div>
+        </div>
         <div class="analysis-text">
           <p>
             El sitio de Immersive Garden es un estudio de experiencias digitales
@@ -49,7 +59,7 @@
           <ul>
             <li>
               <strong
-                ><span style="color: #1fb6c7">Impresión inicial</span>:</strong
+                ><span style="color: #ffaad9">Impresión inicial</span>:</strong
               >
               Tiene un impacto visual fuerte, da sensación de ser una página web
               premium. Nada más entrar en la página, tienes que mover el ratón
@@ -62,7 +72,7 @@
             </li>
             <br />
             <li>
-              <strong><span style="color: #1fb6c7">Estructura</span>:</strong>
+              <strong><span style="color: #ffaad9">Estructura</span>:</strong>
               La web está organizada de forma minimalista, muy centrada en
               proyectos destacados. La estructura está organizada de modo que
               primero presentan el header acompañado de una imagen, a
@@ -82,9 +92,9 @@
             </li>
             <br />
             <li>
-              <strong><span style="color: #1fb6c7">Visual</span>:</strong>
+              <strong><span style="color: #ffaad9">Visual</span>:</strong>
               La paleta de colores es neutral y sobria, sobretodo tiene colores
-              negros, blancos y grises. Usa imágenes elavoradas y con mucho
+              negros, blancos y grises. Usa imágenes elaboradas y con mucho
               contraste de color. No usan colores saturados ni muy brillantes.
               Respecto a la tipofrafía, emplea una tipografía moderna, ligera y
               elegante, del estilo sans serif. La jerarquía del texto es claro:
@@ -98,7 +108,7 @@
             </li>
             <br />
             <li>
-              <strong><span style="color: #1fb6c7">Interacción</span>:</strong>
+              <strong><span style="color: #ffaad9">Interacción</span>:</strong>
               Al hacer scroll, aparecen animaciones suaves y hay transiciones
               entre los diferentes elementos visuales. Destaca el “hoover
               effect”, el cual resulta que al pasar el ratón por encima de los
@@ -120,7 +130,7 @@
             </li>
             <br />
             <li>
-              <strong><span style="color: #1fb6c7">Usabilidad</span>:</strong>
+              <strong><span style="color: #ffaad9">Usabilidad</span>:</strong>
               Respecto a la claridad, la web es muy directa. El usuario sabe al
               instante qué tipo de trabajos y proyectos realiza este estudio.
               Además, la navegación no es abundante ni compleja, sino que es
@@ -133,7 +143,7 @@
             </li>
             <br />
             <li>
-              <strong><span style="color: #1fb6c7">Técnico</span>:</strong>
+              <strong><span style="color: #ffaad9">Técnico</span>:</strong>
               Al usar bastantes animaciones y contener bastantes imágenes, se
               puede penalizar el LPC (Largest Contentful Paint). Al tener
               transiciones y efectos se emplean animaciones de "transform" y
@@ -147,7 +157,7 @@
             <br />
             <li>
               <strong
-                ><span style="color: #1fb6c7">Criterios de excelencia</span
+                ><span style="color: #ffaad9">Criterios de excelencia</span
                 >:</strong
               >
               Esta página web es un sitio muy creativo, usa muchas experiencias
@@ -164,7 +174,7 @@
             </li>
             <br />
             <li>
-              <strong><span style="color: #1fb6c7">Conclusión</span>:</strong>
+              <strong><span style="color: #ffaad9">Conclusión</span>:</strong>
               La página web de Immersive Garden tiene varios puntos fuertes,
               entre los que destacan el acto impacto visual y emociona, la
               coherencia estética, el branding fuerte, las experiencias
@@ -183,42 +193,184 @@
             </li>
           </ul>
         </div>
-        <!-- Contenido de análisis del sitio Awwwards -->
       </section>
       <section id="site-webby">
-        <h2>Webby Awards</h2>
-        <iframe
-          src="https://www.webby.com"
-          title="Sitio Webby"
-          width="100%"
-          height="400"
-          loading="lazy"
-        ></iframe>
-        <!-- Contenido de análisis del sitio Webby -->
+        <div class="site-card">
+          <h2>The Webby Awards: Cap Plastic Now</h2>
+          <a href="https://joryand.co/project/cap-plastic-now/" target="_blank">
+            <img
+              src="../assets/img/cap plastic now.jpg"
+              alt="webby"
+              class="site-thumb"
+            />
+          </a>
+        </div>
+
+        <!-- Modal para mostrar imagen grande y texto -->
+        <div id="modal" class="modal">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img id="modal-img" class="modal-content" />
+          <div id="modal-text"></div>
+        </div>
+        <div class="analysis-text">
+          <p>
+            El sitio de Cap Plastic Now es un proyecto de una campaña
+            audiovisual a favor de un límite a la producción de plástico. Me
+            gusta porque es un proyecto que tiene un propósito y un activismo
+            detrás, intentando concierciar al usuario. Tiene una narrativa
+            fuerte, es un buen ejemplo de cómo usar el diseñor digital para
+            campañas con un mensaje social. <br />
+            <br />
+            Balancea el branding estratégico, dirección de arte con carga
+            conceptual y comunicación de impacto.La página web no diseña para
+            resultar estética, sino para transmitir un significado.
+          </p>
+          <ul>
+            <li>
+              <strong
+                ><span style="color: #ffaad9">Impresión inicial</span>:</strong
+              >
+              Tiene un impacto visual serio, casi gráfico, como si el mensaje
+              estuviera gritando con sobriedad. Hay una tensión visual muy
+              clara, formada por imágenes de plástico, pretróleo e humo, dando
+              la sensación de urgencia, sucidedad, contaminación y peligro. Es
+              destacable mencionar el uso de la limpieza tipográfica y la
+              estructura ordenada que cuadran con el mensaje serio y urgente de
+              la campaña. No provoca distracciones, te invita a leer, a entender
+              el contexto y a sensiblizarte con el tema.
+            </li>
+            <br />
+            <li>
+              <strong><span style="color: #ffaad9">Estructura</span>:</strong>
+              La web presenta una estructura narrativa lienal, diseñada para
+              guiar al usuario de manera fluida a través del mensajes, el
+              contecto y los resultados del proyecto. En el encabezado se
+              mantiene el menú global del estudio dividido en <i>“Porjects”</i>,
+              <i>“About”</i>, <i>“Clients”</i>, <i>“Careers”</i> y
+              <i>“Contact”</i>. El encabezado es minimalista y fijo. Su funcion
+              es ofrecer un acceso directo al resto de portafolio. A
+              continuación, la página comienza con un video que actúa como
+              portada de proyecto y al mismo timeppo como gancho emocional,
+              ubicando al usuario el contexto del tema antes de entrar en los
+              detalles del trabajos, donde aparece el título
+              <i>“Cap Plastic Now”</i>, seguido de un subtítulo que plantea el
+              problema: la contaminación global generada por la producción
+              masiva de plástico. Después, se desarrolla en un bloque de texto
+              breve el desafío de comunicación: cómo convertir una problemática
+              ambiental compleja en una campaña visual efectiva. A continuacióm,
+              se muestra la información central que explica qué hizo Jory&Co y
+              cómo lo hizo, mostrando partes del proceso como piezas gráficas y
+              mockups. El contenido se organiza en bloques verticales con
+              espacios de respiración para no saturar y cada bloque combina
+              texto e imagen para mantener un ritmo visual. Hacia el final se
+              presentan los impactos de la campaña, lo que refuerza credibilidad
+              y cierra el arco narrativo. La página web tiene un footer limpio y
+              funcional que incluye los enlaces a redes sociales, el contacto y
+              otros proyectos, y también el usuario puede volver al listado de
+              trabajos.
+            </li>
+            <br />
+            <li>
+              <strong><span style="color: #ffaad9">Visual</span>:</strong>
+              La paleta de colores está compuesta por colores friíos, oscuros y
+              neutros, mucho negro, gris, blanco, sobre los cuales destaca el
+              color rojo. Respecto a la tipografía, es una sans serif moderna y
+              limpia. La jerarquía de ésta está marcada: titulares grandes,
+              citas destacadas y teto explicativo. En ocasiones, para enfatizar
+              se juega con un peso tipográfico más grande, como en
+              <i>“Big oil. Big plastic. Big emissions.”</i>. En relación al
+              branding, es coherente, con un mensajes serio, directo y con
+              carácter. La identidad del proyecto visual conecta con el mensaje
+              de urgencia. Además refuerzan la credibilidad al citar fuentes
+              externas y datos reales.
+            </li>
+            <br />
+            <li>
+              <strong><span style="color: #ffaad9">Interacción</span>:</strong>
+              No hay animaciones ostentosas ni extravagantes. Las transiciones
+              entre texto e imágenes son suaves. No hay microinteracciones
+              complejas al pasar el cursos, el foco está en el contenido y no
+              hay distracciones. Al hacer scroll, el desplazamiento es fluido y
+              estable, sin sobresaltos visuales ni animaciones excesivas. Al
+              desplazarse, los elementos aparecen mediante desvanecimientos
+              sutiles en el eje vertical, haciendo así que la animación acompaña
+              a la lectura. Algunas imágenes parecen tener un leve parallax que
+              aporta profundidad y dinamismo sin romper la lectura. Los efectos
+              de "hover" se limitan a ligeros cambios de opacidad o color.
+            </li>
+            <br />
+            <li>
+              <strong><span style="color: #ffaad9">Usabilidad</span>:</strong>
+              Respecto a la claridad, la web es excelente, ya que objetivo del
+              proyecto queda claro rápidamente. Los textos están organizados y
+              las frases de gran peso guían la lectura. El usuario no se distrae
+              navegando por la página. En relación a la accesibilidad, aunque el
+              sitio da sensación de orden y limpieza visual, pueden existir
+              varios retos técnico. Si las imágenes empleadas son decorativas,
+              es fundamental que cuenten con atributos <i>alt</i> adecuados o
+              sean marcadas como no esenciales para evitar problemas con
+              lectores de pantalla. El contraste entre texto y fondo mantiene un
+              nivel aceptable de legibilidad. En cuanto a la carga, el proyecto
+              emplea imágenes grandes, lo que puede aumentar el peso total de la
+              página. Deben estar debidamente optimizadas, de lo contrario
+              podrían ralentizar la experiencia, sobre todo en dispositivos
+              móviles.
+            </li>
+            <br />
+            <li>
+              <strong><span style="color: #ffaad9">Técnico</span>:</strong>
+              En cuanto a velocidad, el
+              <i>Largest Contentful Paint (LCP)</i> podría verse afectado por
+              las grandes imágenes que constituyen la base visual del proyecto.
+              Lo más recomendable sería optimizar su formato y tamaño. El
+              <i>Cumulative Layout Shift (CLS)</i>, que mide los desplazamientos
+              visuales al cargar, debe controlarse definiendo dimensiones fijas
+              para cada elemento gráfico. En el caso del
+              <i>First Input Delay (FID)</i>, la web mantiene buenos resultados,
+              ya que no presenta interacciones complejas ni scripts excesivos.
+              Desde el punto de vista de la semántica, la estructura HTML se
+              basa en el uso correcto de secciones "section", encabezados
+              "header", y artículos "article".
+            </li>
+
+            <br />
+            <li>
+              <strong
+                ><span style="color: #ffaad9">Criterios de excelencia</span
+                >:</strong
+              >
+              n términos de creatividad, el proyecto logra una representación
+              visual muy buena teniendo en cuenta que trata sobre un tema
+              complejo, ya que comunica la problemática ambiental del plástico a
+              través de imágenes poderosas y composiciones conceptuales. El
+              contenido se mantiene preciso y relevante. No hay textos
+              innecesarios ni información superficial. En cuanto a la
+              experiencia de usuario, la navegación es sencilla y sin
+              distracciones. El usuario se immerge en la página sin elementos
+              que interrumpan la lectura o la visualización.
+            </li>
+            <br />
+            <li>
+              <strong><span style="color: #ffaad9">Conclusión</span>:</strong>
+              La página web de Immersive Garden tiene varios puntos fuertes,
+              entre los que destacan el acto impacto visual y emociona, la
+              coherencia estética, el branding fuerte, las experiencias
+              immersivas son innovadoras y fuera de lo común que se prodrían
+              encontra en otras páginas web, la simplicidad destaca por encima
+              de todo en ella está el foco central y tiene basntante prestigio
+              en la industria actual al presentar marcas poderosas, mencionadas
+              anteriormente en la estructura.
+              <br />
+              Pera Immersiva Garden también tiene algunos puntos débiles, como
+              por ejemplo que haya la posibilidad de que en dispositivos más
+              lentos o con menos capacidad de procesamiento, la carga de la
+              página sea lenta y pueda afectar a la experiencia del usuario.
+              Otro punto débil es que a veces no es tan claro qué elementos son
+              interactuables.
+            </li>
+          </ul>
+        </div>
       </section>
-      <section id="site-fwa">
-        <h2>FWA</h2>
-        <iframe
-          src="https://thefwa.com/"
-          title="Sitio FWA"
-          width="100%"
-          height="400"
-          loading="lazy"
-        ></iframe>
-        <!-- Contenido de análisis del sitio FWA -->
-      </section>
-      <section id="site-cssda">
-        <h2>CCSDA</h2>
-        <iframe
-          src="https://www.cssdesignawards.com/"
-          title="Sitio CSSDA"
-          width="100%"
-          height="400"
-          loading="lazy"
-        ></iframe>
-        <!-- Contenido de análisis del sitio CSSDA -->
-      </section>
-      <!-- Más secciones para FWA, CSS Design Awards, etc. -->
     </main>
     <footer>
       <p>© 2025 Web Atelier (UDIT) – Informe de análisis.</p>
