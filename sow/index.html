@@ -6,30 +6,68 @@
     <title>Some Outstanding Webs – Análisis de Sitios Premiados</title>
     <link rel="stylesheet" href="../assets/css/#index.css" />
     <link rel="stylesheet" href="../assets/css/sow.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Some Outstanding Webs – Análisis de Sitios Premiados</title>
+    <meta
+      name="description"
+      content="Análisis y opinión sobre sitios web premiados en Awwwards, Webby, FWA y CSSDA. Inspiración y tendencias en diseño web."
+    />
+    <meta
+      name="keywords"
+      content="diseño web, premios, Awwwards, Webby, FWA, CSSDA, análisis, tendencias"
+    />
+    <meta name="author" content="Morgana Ruiz" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="Some Outstanding Webs – Análisis de Sitios Premiados"
+    />
+    <meta
+      property="og:description"
+      content="Descubre el análisis de los mejores sitios web premiados y las tendencias en diseño digital."
+    />
+    <meta property="og:image" content="URL_de_tu_imagen_destacada.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://morganaruiz.com/" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <meta name="theme-color" content="#222222" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <h1>Some Outstanding Webs</h1>
-      <nav>
-        <!-- Menú de navegación fijo -->
-        <ul>
-          <li>
-            <a href="#site-immersirve garden">A site choosen from Awwwards</a>
-          </li>
-          <li><a href="#site-webby">A site choosen from Webby</a></li>
-          <li><a href="#site-fwa">A site choosen from FWA</a></li>
-          <li><a href="#site-cssda">A site choosen from CSSDA</a></li>
-        </ul>
-      </nav>
-    </header>
+    <section class="cover">
+      <h1 class="title">Some Outstanding Webs</h1>
+    </section>
+    <nav>
+      <!-- Menú de navegación fijo -->
+      <ul>
+        <li>
+          <a href="https://immersive-g.com/">A site choosen from Awwwards</a>
+        </li>
+        <li>
+          <a href="https://joryand.co/project/cap-plastic-now/"
+            >A site choosen from Webby</a
+          >
+        </li>
+        <li>
+          <a href="https://urbanjurgensen.com/">A site choosen from FWA</a>
+        </li>
+        <li><a href="#site-cssda">A site choosen from CSSDA</a></li>
+      </ul>
+    </nav>
     <main>
       <section id="site-awwwards">
         <!-- Tarjeta para Awwwards -->
-        <div class="site-card">
+        <div class="site-card reveal">
           <h2>Awwwards: Immersive Garden</h2>
           <a href="https://immersive-g.com/" target="_blank">
             <img
-              src="../assets/img/Untitled design (2).jpg"
+              src="https://ik.imagekit.io/morganaruiz/immersive%20garden.jpg?updatedAt=1760624149742"
               alt="Awwwards"
               class="site-thumb"
             />
@@ -37,12 +75,12 @@
         </div>
 
         <!-- Modal para mostrar imagen grande y texto -->
-        <div id="modal" class="modal">
+        <div id="modal" class="modal reveal">
           <span class="close" onclick="closeModal()">&times;</span>
           <img id="modal-img" class="modal-content" />
           <div id="modal-text"></div>
         </div>
-        <div class="analysis-text">
+        <div class="analysis-text reveal">
           <p>
             El sitio de Immersive Garden es un estudio de experiencias digitales
             immersivas que, para una estudiante como yo que estudia resulta muy
@@ -182,24 +220,27 @@
               encontra en otras páginas web, la simplicidad destaca por encima
               de todo en ella está el foco central y tiene basntante prestigio
               en la industria actual al presentar marcas poderosas, mencionadas
-              anteriormente en la estructura.
-              <br />
-              Pera Immersiva Garden también tiene algunos puntos débiles, como
-              por ejemplo que haya la posibilidad de que en dispositivos más
-              lentos o con menos capacidad de procesamiento, la carga de la
-              página sea lenta y pueda afectar a la experiencia del usuario.
-              Otro punto débil es que a veces no es tan claro qué elementos son
-              interactuables.
+              anteriormente en la estructura. Pero Immersiva Garden también
+              tiene algunos puntos débiles, como por ejemplo que haya la
+              posibilidad de que en dispositivos más lentos o con menos
+              capacidad de procesamiento, la carga de la página sea lenta y
+              pueda afectar a la experiencia del usuario. Otro punto débil es
+              que a veces no es tan claro qué elementos son interactuables.
+              Respecto a los apredizajes, esta página web fusiona lo visual con
+              lo interactivo. Presenta solo lo esencial y da protagonismo al
+              contenido. Las animaciones y microinteracciones elevan la
+              experiencia y no abusa de ellas y cuida la semántica y la
+              accesibilidad desde el inicio.
             </li>
           </ul>
         </div>
       </section>
       <section id="site-webby">
-        <div class="site-card">
+        <div class="site-card reveal">
           <h2>The Webby Awards: Cap Plastic Now</h2>
           <a href="https://joryand.co/project/cap-plastic-now/" target="_blank">
             <img
-              src="../assets/img/cap plastic now.jpg"
+              src="https://ik.imagekit.io/morganaruiz/cap%20plastic%20now.jpg?updatedAt=1760624149758"
               alt="webby"
               class="site-thumb"
             />
@@ -207,12 +248,12 @@
         </div>
 
         <!-- Modal para mostrar imagen grande y texto -->
-        <div id="modal" class="modal">
+        <div id="modal" class="modal reveal">
           <span class="close" onclick="closeModal()">&times;</span>
           <img id="modal-img" class="modal-content" />
           <div id="modal-text"></div>
         </div>
-        <div class="analysis-text">
+        <div class="analysis-text reveal">
           <p>
             El sitio de Cap Plastic Now es un proyecto de una campaña
             audiovisual a favor de un límite a la producción de plástico. Me
@@ -272,7 +313,7 @@
             <br />
             <li>
               <strong><span style="color: #ffaad9">Visual</span>:</strong>
-              La paleta de colores está compuesta por colores friíos, oscuros y
+              La paleta de colores está compuesta por colores fríos, oscuros y
               neutros, mucho negro, gris, blanco, sobre los cuales destaca el
               color rojo. Respecto a la tipografía, es una sans serif moderna y
               limpia. La jerarquía de ésta está marcada: titulares grandes,
@@ -339,7 +380,7 @@
                 ><span style="color: #ffaad9">Criterios de excelencia</span
                 >:</strong
               >
-              n términos de creatividad, el proyecto logra una representación
+              En términos de creatividad, el proyecto logra una representación
               visual muy buena teniendo en cuenta que trata sobre un tema
               complejo, ya que comunica la problemática ambiental del plástico a
               través de imágenes poderosas y composiciones conceptuales. El
@@ -352,21 +393,186 @@
             <br />
             <li>
               <strong><span style="color: #ffaad9">Conclusión</span>:</strong>
-              La página web de Immersive Garden tiene varios puntos fuertes,
-              entre los que destacan el acto impacto visual y emociona, la
-              coherencia estética, el branding fuerte, las experiencias
-              immersivas son innovadoras y fuera de lo común que se prodrían
-              encontra en otras páginas web, la simplicidad destaca por encima
-              de todo en ella está el foco central y tiene basntante prestigio
-              en la industria actual al presentar marcas poderosas, mencionadas
-              anteriormente en la estructura.
-              <br />
-              Pera Immersiva Garden también tiene algunos puntos débiles, como
-              por ejemplo que haya la posibilidad de que en dispositivos más
-              lentos o con menos capacidad de procesamiento, la carga de la
-              página sea lenta y pueda afectar a la experiencia del usuario.
-              Otro punto débil es que a veces no es tan claro qué elementos son
-              interactuables.
+              La página web de Cap Pastic Now tiene varios puntos fuertes, entre
+              los que destacan un mensaje claro y contudente, una estética
+              alineada con el propósito, una fusión eficaz entre diseño y
+              contenido con propósito social. Evita los adornos innecesarios y
+              tiene potencial para impactar emocionalmente al visitante. La
+              página web destaca por su mensaje claro y contundente, sustentado
+              por una estética coherente con el propósito social que aborda.
+              Pero Cap Plastic Now también tiene algunos puntos débiles, como
+              por ejemplo que al tener imágenes grandes, si no están
+              optimizadas, la carga de la página puede ser lenta y afectar a la
+              experiencia del usuario. También hay ciertos aspectos de
+              accesibilidad podrían requerir una revisión más profunda,
+              especialmente en temas de contraste o navegación. La falta de
+              interacciones puede resultar en una experienca estática. En
+              relación a los aprendizajes, emplea muy bien los pocos efectos y
+              la claridad para transmitir mensajes importantes. La tensión
+              visual generado por imágenes impactantes y tipografías fuertes es
+              una herramienta sólida. La narrativa visual que actua como texto
+              adicional está bien empleada, ya que no todo tiene que decirse con
+              palabras si no con las imágenes que muestra.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="site-fwa">
+        <div class="site-card" reveal>
+          <h2>FWA: Urban Jürgensen</h2>
+          <a href="https://urbanjurgensen.com/" target="_blank">
+            <img
+              src="https://ik.imagekit.io/morganaruiz/urbanjurgensen.jpg?updatedAt=1760624149709"
+              alt="webby"
+              class="site-thumb"
+            />
+          </a>
+        </div>
+
+        <!-- Modal para mostrar imagen grande y texto -->
+        <div id="modal" class="modal reveal">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img id="modal-img" class="modal-content" />
+          <div id="modal-text"></div>
+        </div>
+        <div class="analysis-text reveal">
+          <p>
+            La elección del sitio web de Urban Jürgensen responde a su
+            relevancia como ejemplo de diseño digital orientado al sector del
+            lujo y la alta relojería. Esta página web plantea un desafío
+            comunicacional y estético singular: traducir valores de herencia,
+            precisión artesanal y exclusividad a un entorno digital
+            contemporáneo. En general, cómo un sitio web puede equilibrar la
+            tradición con la innovación.
+            <br />
+            Además, la página web no solo exhibe los productos, sino que
+            contribuye a usan experiencia immersiva y emocional.
+          </p>
+          <ul>
+            <li>
+              <strong
+                ><span style="color: #ffaad9">Impresión inicial</span>:</strong
+              >
+              Tiene un impacto visual de marca sobria, elegante y atemporal.
+              Desde el inicio de la página, se percibe un tono de calma,
+              precisión y refinamiento. El eslogan <i>"Time Well Spent"</i>
+              refuerza la narrativa de valor y paciencia. De esta manera, el
+              usuario puede asociar la experiencia digital a los atributos de
+              los rejoles, como la precisión, el detalle y la durabilidad. La
+              composición en general transmite sensación de exclusividad sin
+              ostentación.
+            </li>
+            <br />
+            <li>
+              <strong><span style="color: #ffaad9">Estructura</span>:</strong>
+              La estructura de la página está diseñada con claridad jerárquica y
+              navegación intuitiva. El menú principal agrupa las secciones
+              fundamentales: <i>“Watches”</i>, <i>“Legacy”</i>,
+              <i>“Stories”</i>, <i>“Atelier”</i> y <i>“Contact”</i>. La página
+              de inicio combina elementos visuales de impacto con bloques de
+              texto que describen la fisolofía de la marca. Desde ahí, el
+              usuario puede explorar las colecciones de relojes, explorar la
+              historia de la marca y descubrir relatos relacionados. Cada
+              apartado está diseñado para reforzar un eje temático:
+              <i>“Watches”</i> muestra la colección con fichas técnicas
+              detalladas; <i>“Legacy”</i> profundiza en la historia y la
+              herencia de la marca; <i>“Stories”</i>
+              ofrece contenido editorial que humaniza el discurso corporativo; y
+              <i>“Atelier”</i> visibiliza el proceso artesanal de producción.
+            </li>
+            <br />
+            <li>
+              <strong><span style="color: #ffaad9">Visual</span>:</strong>
+              La paleta de colores está compuesta por colores tonos neutros,
+              blancos, grises y negros, complementados con tonos metalizados o
+              azulados. Respecto a la tipografía, combina fuentes serif clásicas
+              con tipografías sans serif contemporáneas, equilibrando tradición
+              y modernidad, y la jerarquía tipográfica está bien definida. En
+              relación al branding, el sitio comunica con precisión los valores
+              centrales de la marca: herencia, artesanía y excelencia técnica.
+              El logotipo, el tono cromático y la dirección fotográfica forman
+              un lenguaje visual confiado, prestigioso y atemporal.
+            </li>
+            <br />
+            <li>
+              <strong><span style="color: #ffaad9">Interacción</span>:</strong>
+              Las animaciones son sutiles y refinadas. Las transiciones son
+              suaves, con efectos de desvanecimientos y desplazamientos ligeros
+              al hacer scroll. Todo esto ayuda a que la experiencia sea fluida y
+              sin interrupciones ni elemetos que distraigan al usuario. Las
+              microinteracciones son discretas, como cambios de opacidad o color
+              al pasar el cursor sobre botones y enlaces. Por ejemplo, en la
+              galería de relojes, las transiciones entre modelos se ejecutan con
+              fluidez. El movimiento no busca sorprender al usuario, sino
+              acompañar la lectura y reforzar la narrativa visual. Cada
+              animación tiene una función expresiva y no ornamental. La
+              experiencia global es elegante, funcional y emocionalmente
+              contenida.
+            </li>
+            <br />
+            <li>
+              <strong><span style="color: #ffaad9">Usabilidad</span>:</strong>
+              Respecto a la claridad, el sitio presenya una navegación logica y
+              comprensible. El usuario puede indetificar fácilmente las rutas
+              hacia los productos, la historia y el contactoçç, sin redundacias
+              ni complicaciones. En relación a la accesibilidad,
+            </li>
+            <br />
+            <li>
+              <strong><span style="color: #ffaad9">Técnico</span>:</strong>
+              En cuanto a velocidad, el
+              <i>Largest Contentful Paint (LCP)</i> podría verse afectado por
+              las grandes imágenes que constituyen la base visual del proyecto.
+              Lo más recomendable sería optimizar su formato y tamaño. El
+              <i>Cumulative Layout Shift (CLS)</i>, que mide los desplazamientos
+              visuales al cargar, debe controlarse definiendo dimensiones fijas
+              para cada elemento gráfico. En el caso del
+              <i>First Input Delay (FID)</i>, la web mantiene buenos resultados,
+              ya que no presenta interacciones complejas ni scripts excesivos.
+              Desde el punto de vista de la semántica, la estructura HTML se
+              basa en el uso correcto de secciones "section", encabezados
+              "header", y artículos "article".
+            </li>
+
+            <br />
+            <li>
+              <strong
+                ><span style="color: #ffaad9">Criterios de excelencia</span
+                >:</strong
+              >
+              En términos de creatividad, el proyecto logra una representación
+              visual muy buena teniendo en cuenta que trata sobre un tema
+              complejo, ya que comunica la problemática ambiental del plástico a
+              través de imágenes poderosas y composiciones conceptuales. El
+              contenido se mantiene preciso y relevante. No hay textos
+              innecesarios ni información superficial. En cuanto a la
+              experiencia de usuario, la navegación es sencilla y sin
+              distracciones. El usuario se immerge en la página sin elementos
+              que interrumpan la lectura o la visualización.
+            </li>
+            <br />
+            <li>
+              <strong><span style="color: #ffaad9">Conclusión</span>:</strong>
+              La página web de Cap Pastic Now tiene varios puntos fuertes, entre
+              los que destacan un mensaje claro y contudente, una estética
+              alineada con el propósito, una fusión eficaz entre diseño y
+              contenido con propósito social. Evita los adornos innecesarios y
+              tiene potencial para impactar emocionalmente al visitante. La
+              página web destaca por su mensaje claro y contundente, sustentado
+              por una estética coherente con el propósito social que aborda.
+              Pero Cap Plastic Now también tiene algunos puntos débiles, como
+              por ejemplo que al tener imágenes grandes, si no están
+              optimizadas, la carga de la página puede ser lenta y afectar a la
+              experiencia del usuario. También hay ciertos aspectos de
+              accesibilidad podrían requerir una revisión más profunda,
+              especialmente en temas de contraste o navegación. La falta de
+              interacciones puede resultar en una experienca estática. En
+              relación a los aprendizajes, emplea muy bien los pocos efectos y
+              la claridad para transmitir mensajes importantes. La tensión
+              visual generado por imágenes impactantes y tipografías fuertes es
+              una herramienta sólida. La narrativa visual que actua como texto
+              adicional está bien empleada, ya que no todo tiene que decirse con
+              palabras si no con las imágenes que muestra.
             </li>
           </ul>
         </div>
@@ -375,5 +581,16 @@
     <footer>
       <p>© 2025 Web Atelier (UDIT) – Informe de análisis.</p>
     </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      ScrollReveal().reveal(".reveal", {
+        duration: 1200,
+        distance: "40px",
+        origin: "bottom",
+        easing: "ease-out",
+        opacity: 0,
+        reset: false, // Si lo pones en true, se repite al hacer scroll arriba
+      });
+    </script>
   </body>
 </html>

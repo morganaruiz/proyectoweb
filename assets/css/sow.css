@@ -1,7 +1,35 @@
 body {
-  background-color: white;
-  font-family: "Times New Roman", Times, serif;
+  background: #f5f5f5 100%;
+  font-family: "Instrument Serif", serif;
   font-size: 0.7rem; /* Tamaño de texto más pequeño */
+  color: black;
+}
+
+.cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  color: #23afa5;
+  width: 100%;
+  min-width: 80vw;
+  margin: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-radius: 8px;
+}
+.title {
+  font-size: 75px;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeIn 2s forwards ease-in;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 section {
@@ -13,7 +41,7 @@ header h1 {
 }
 header {
   background: #fff;
-  box-shadow: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
 }
 nav {
   position: fixed;
@@ -21,8 +49,10 @@ nav {
   z-index: 1000;
 }
 nav ul {
+  justify-content: center;
+  width: 100%;
   list-style: none;
-  margin: 0;
+  margin: 2vh;
   padding: 0;
   display: flex;
 }
@@ -30,22 +60,30 @@ nav ul li {
   margin-right: 1rem;
 }
 nav ul li a {
+  background: transparent;
+  padding: 0.5rem 1rem;
+  text-align: center;
   text-decoration: none;
-  color: #791fc7;
+  color: #e42a7d;
 }
 html {
   scroll-behavior: smooth;
 }
 nav ul li a:hover,
 nav ul li a:focus {
-  color: #007acc;
+  color: #23afa5;
   outline: none;
 }
 
 .analysis-text {
-  max-width: 700px; /* ancho máximo del bloque de texto */
+  max-width: 650px; /* ancho máximo del bloque de texto */
   margin: 2rem auto; /* centra el bloque y añade espacio arriba/abajo */
-  padding: 0 1rem; /* espacio a los lados para que no pegue al borde */
+  padding: 2.5rem 2.5rem;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  line-height: 1.8;
 }
 
 .analysis-text p {
@@ -57,13 +95,12 @@ nav ul li a:focus {
 }
 
 .analysis-text ul li::marker {
-  color: #ffaad9; /* Elige el color que prefieras */
+  color: #e42a7d;
 }
 
 .site-card {
   border: 1px solid #e2e8f0;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
   padding: 1rem;
   margin: 2rem auto;
   max-width: 700px;
@@ -74,10 +111,10 @@ nav ul li a:focus {
 
 .site-thumb {
   width: 100%;
-  max-width: 650px;
-  cursor: pointer;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
   border-radius: 8px;
-  margin-bottom: 1rem;
 }
 
 /* Modal styles */
@@ -137,6 +174,15 @@ nav ul li a:focus {
   text-align: center;
 }
 
+.site-card p {
+  max-width: 38ch; /* Aproximadamente 60–70 caracteres */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left; /* O justify, según prefieras */
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 @media (max-width: 600px) {
   .site-card,
   .analysis-text {
@@ -168,4 +214,10 @@ nav ul li a:focus {
     margin-right: auto;
     display: block;
   }
+}
+.analysis-text p,
+.analysis-text ul li {
+  text-align: justify;
+  hyphens: auto;
+  color: black;
 }
