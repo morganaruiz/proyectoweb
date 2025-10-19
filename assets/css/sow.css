@@ -10,7 +10,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 50vh;
-  color: #23afa5;
   width: 100%;
   min-width: 80vw;
   margin: 0;
@@ -25,6 +24,7 @@ body {
   text-transform: uppercase;
   opacity: 0;
   animation: fadeIn 2s forwards ease-in;
+  color: #23afa5 !important;
 }
 @keyframes fadeIn {
   to {
@@ -33,7 +33,7 @@ body {
 }
 
 section {
-  height: 300vh;
+  height: 450vh;
 }
 
 header h1 {
@@ -96,6 +96,26 @@ nav ul li a:focus {
 
 .analysis-text ul li::marker {
   color: #e42a7d;
+}
+
+.analysis-text ul {
+  list-style: disc; /* tipo de marcador */
+  list-style-position: outside; /* fuera del bloque de texto */
+  margin-left: 1.5rem; /* espacio desde el borde izquierdo */
+  padding-left: 0; /* opcional según tu layout */
+}
+
+/* Si tienes li con display:flex, forzamos que se comporte como list-item */
+.analysis-text ul li {
+  display: list-item;
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* Personalizar color del bullet */
+.analysis-text ul li::marker {
+  color: #791fc7;
+  font-size: 1em;
 }
 
 .site-card {
@@ -220,4 +240,10 @@ nav ul li a:focus {
   text-align: justify;
   hyphens: auto;
   color: black;
+}
+
+body {
+  cursor:
+    url("https://ik.imagekit.io/morganaruiz/favicon-16x16-Photoroom.png?updatedAt=1760730117458"),
+    auto;
 }
