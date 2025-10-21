@@ -1,5 +1,5 @@
 body {
-  background: #f5f5f5 100%;
+  background: #f0ddf9 100%;
   font-family: "Instrument Serif", serif;
   font-size: 0.7rem; /* Tamaño de texto más pequeño */
   color: black;
@@ -9,15 +9,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 100vh;
   width: 100%;
-  min-width: 80vw;
   margin: 0;
   padding-left: 2rem;
   padding-right: 2rem;
   box-sizing: border-box;
-  background-color: transparent;
-  border-radius: 8px;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 50%, #a18cd1 100%);
+  background-position: center;
+  background-size: cover;
+  padding: 4rem 5vw;
 }
 .title {
   font-size: 75px;
@@ -25,6 +26,8 @@ body {
   opacity: 0;
   animation: fadeIn 2s forwards ease-in;
   color: #23afa5 !important;
+  z-index: 2;
+  position: relative;
 }
 @keyframes fadeIn {
   to {
@@ -114,7 +117,7 @@ nav ul li a:focus {
 
 /* Personalizar color del bullet */
 .analysis-text ul li::marker {
-  color: #791fc7;
+  color: #e42a7d;
   font-size: 1em;
 }
 
@@ -127,6 +130,17 @@ nav ul li a:focus {
   width: 100%;
   text-align: center;
   background: #fff;
+}
+
+.site-card {
+  transition:
+    transform (scale 1.05) 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
+.site-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .site-thumb {
@@ -242,8 +256,61 @@ nav ul li a:focus {
   color: black;
 }
 
+/* Layout para dejar el footer abajo */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* main ocupa el espacio disponible */
+main {
+  flex: 1 0 auto;
+}
+
+/* footer simple fijo al final cuando el contenido es corto */
+footer {
+  flex-shrink: 0;
+  padding: 1.5rem;
+  text-align: center;
+  background: transparent; /* o color que prefieras */
+}
+
+/* Si tienes reglas que fuerzan altura en <section>, anúlalas */
+section {
+  height: auto !important;
+}
+
 body {
   cursor:
     url("https://ik.imagekit.io/morganaruiz/favicon-16x16-Photoroom.png?updatedAt=1760730117458"),
     auto;
+}
+
+.screenshots-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.gallery.row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 50rem;
+  width: 100%;
+}
+
+.gallery.row img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
 }
