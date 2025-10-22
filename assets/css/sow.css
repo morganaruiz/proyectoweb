@@ -21,7 +21,7 @@ body {
   padding: 4rem 5vw;
 }
 .title {
-  font-size: 75px;
+  font-size: clamp(2rem, 8vw, 4.5rem);
   text-transform: uppercase;
   opacity: 0;
   animation: fadeIn 2s forwards ease-in;
@@ -212,6 +212,12 @@ nav ul li a:focus {
   padding: 1rem;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
 
 .site-card p {
   max-width: 38ch; /* Aproximadamente 60–70 caracteres */
@@ -299,23 +305,43 @@ body {
 }
 
 .screenshots-gallery {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-}
-
-.gallery.row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  max-width: 50rem;
   width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+  box-sizing: border-box;
+  margin: 2rem auto;
 }
 
-.gallery.row img {
+.gallery-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  gap: 2rem; /* espacio entre imágenes */
+}
+
+.screenshots {
+  width: 100%; /* ocupa toda la celda del grid */
+}
+
+.screenshots img {
   width: 100%;
   height: auto;
   border-radius: 1rem;
   object-fit: cover;
+  display: block;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.screenshots img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gallery-row {
+    grid-template-columns: 1fr; /* una columna en móvil */
+    gap: 1.5rem;
+  }
 }
