@@ -59,6 +59,11 @@ nav ul {
   padding: 0;
   display: flex;
 }
+nav ul {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 nav ul li {
   margin-right: 1rem;
 }
