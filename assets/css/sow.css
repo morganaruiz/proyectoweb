@@ -203,6 +203,12 @@ nav ul li a:focus {
   margin: 0 auto;
   padding: 2rem 0;
 }
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
 
 .site-card {
   background: #fff;
@@ -211,12 +217,14 @@ nav ul li a:focus {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   padding: 1rem;
   text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
-@media (max-width: 768px) {
-  .cards-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
+
+.site-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .site-card p {
