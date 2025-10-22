@@ -305,7 +305,7 @@ body {
 }
 
 .screenshots-gallery {
-  width: 100%;
+  width: 60%;
   max-width: 1200px;
   padding: 2rem;
   box-sizing: border-box;
