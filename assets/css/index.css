@@ -1,6 +1,5 @@
 @import url("reset.css"); /* CSS Reset para compatibilidad entre navegadores */
-@import url("style.css"); /* Estilos principales */
-@import url("assets/css/reset.css");
+@import url("site.css"); /* Estilos principales */
 
 /* Fuente personalizada desde Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
