@@ -37,5 +37,8 @@
 		"responsive-design",
 		"udit",
 		"student-project"
-	]
+	],
+	"dependencies": {
+		"bootstrap": "^5.3.0"
+	}
 }

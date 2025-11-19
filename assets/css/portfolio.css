@@ -1,0 +1,12 @@
+html {
+  font-size: 16px;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: wheat;
+  margin: 0;
+  padding: 0;
+}
