@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("/assets/fonts/ArialNarrow-font.woff2") format("woff2");
+}
+
 html {
   font-size: 16px;
   line-height: 1.6;
@@ -12,8 +17,8 @@ html {
 }
 
 body {
-  font-family: "garamond-italic", sans-serif;
-  background-image: url("/assets/img/lotus-614421.jpg");
+  font-family: "Arial Narrow", sans-serif;
+  background-image: url("/assets/img/fondoturquesa.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; /* cover asegura que cubra todo el viewport */
@@ -61,7 +66,7 @@ y he indicado margin: 0. ahora añadiré el media query. */
   margin: 2rem 0 0 0; /* ensure headings inside cover have zero margin */
 }
 h2 {
-  font-family: "garamond-italic";
+  font-family: "Arial Narrow";
   text-align: left;
   font-size: 3rem;
   color: #67d5e2;
@@ -88,7 +93,7 @@ h2 {
 }
 
 .texto-intro {
-  font-family: "garamond-italic";
+  font-family: "Arial Narrow";
   text-align: justify;
   font-size: 1rem;
   line-height: 1.5;
@@ -132,7 +137,19 @@ nav ul li a {
   text-align: center;
   text-decoration: none;
 }
-
+.glass-nav {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+}
 /* Use a row layout inside the glass-card content */
 .glass-card-content {
   display: flex;
@@ -323,13 +340,13 @@ tarjeta siga siendo legible. */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  font-family: "garamond-italic";
+  font-family: "Arial Narrow";
   font-size: 0.7rem;
   line-height: 1.5;
   color: #151515;
 }
 .five-blocks .grid-5 .block h3 {
-  font-family: "garamond-italic";
+  font-family: "Arial Narrow";
   font-size: 1.5rem;
   line-height: 1.5;
   color: #67d5e2;
@@ -377,14 +394,14 @@ tarjeta siga siendo legible. */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: "garamond-italic";
+  font-family: "Arial Narrow";
   font-size: 1.5rem;
   line-height: 1.5;
   color: #67d5e2;
 }
 
 .four-blocks .grid-4 .block h4 {
-  font-family: "garamond-italic";
+  font-family: "Arial Narrow";
   font-size: 1.5rem;
   line-height: 1.5;
   color: #67d5e2;
@@ -421,7 +438,7 @@ tarjeta siga siendo legible. */
     position: fixed;
     inset: 0;
     z-index: -1;
-    background-image: url("/assets/img/lotus-614421.jpg");
+    background-image: url("/assets/img/fondoturquesa.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -429,3 +446,32 @@ tarjeta siga siendo legible. */
     /* opacity: 0.9; */
   }
 }
+
+/* Ensure headings use the page's main font and are not bold. de esta 
+forma me aseguro que la fuente en estas clases no está en negrita, 
+porque no la quiero en negrita. */
+h2,
+h3,
+h4 {
+  font-family: inherit; /* inherit the body font */
+  font-weight: 400; /* normal weight; use 300 if your font supports thin */
+  font-style: normal; /* remove any forced italics */
+  font-variation-settings: normal; /* reset variable font settings if any */
+}
+
+/* Optional: when inside glass-card keep heading styling consistent (specificity) */
+
+.glass-card h3 {
+  font-family: inherit;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mini-glass-card h4 {
+  font-family: inherit;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* If you prefer a thinner look and the font supports it, use 300 or 200: */
+/* h1, h2, h3, h4 { font-weight: 300; } */
