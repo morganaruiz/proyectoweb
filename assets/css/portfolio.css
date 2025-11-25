@@ -1,17 +1,23 @@
-@font-face {
-  font-family: "Black Castle";
-  src: url("/assets/fonts/BlackCastleMF.woff2");
-}
-
 html {
   font-size: 16px;
   line-height: 1.6;
   scroll-behavior: smooth;
 }
+/* Variables para control de espaciado en grid */
+:root {
+  --grid-max-width: 1200px;
+  --grid-inline-margin: 1rem; /* margen lateral del grid */
+  --block-padding-inline: 0.6rem; /* padding horizontal dentro de cada bloque */
+  --grid-gap: 1rem; /* espacio entre columnas */
+}
 
 body {
-  font-family: "Arial", sans-serif;
-  background-image: url("/assets/img/lotus-7491929_1280.jpg");
+  font-family: "garamond-italic", sans-serif;
+  background-image: url("/assets/img/lotus-614421.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; /* cover asegura que cubra todo el viewport */
+  background-attachment: fixed; /* hace que la imagen sea estática al hacer scroll */
   margin: 0;
   padding: 0;
   font-size: 1.5rem;
@@ -39,7 +45,7 @@ body {
 h1 {
   font-family: "Aston Script";
   font-size: 5rem;
-  color: teal;
+  color: #67d5e2;
   line-height: 1; /* reduce internal leading */
   margin: 0; /* override default browser margin */
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
@@ -58,7 +64,7 @@ h2 {
   font-family: "garamond-italic";
   text-align: left;
   font-size: 3rem;
-  color: teal;
+  color: #67d5e2;
   margin: 2rem 0 0 0; /* top margin to separate from h1 */
   line-height: 1;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
@@ -78,6 +84,7 @@ h2 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
+  overflow: visible;
 }
 
 .texto-intro {
@@ -87,6 +94,7 @@ h2 {
   line-height: 1.5;
   color: #151515;
 }
+
 .right {
   flex: 0 0 30%;
   display: flex;
@@ -96,6 +104,33 @@ h2 {
   width: 100%;
   height: auto;
   display: block;
+}
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+nav ul {
+  justify-content: center;
+  width: 100%;
+  list-style: none;
+  margin: 2vh;
+  padding: 0;
+  display: flex;
+}
+nav ul {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav ul li {
+  margin-right: 1rem;
+}
+nav ul li a {
+  background: transparent;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
 }
 
 /* Use a row layout inside the glass-card content */
@@ -199,7 +234,7 @@ tarjeta siga siendo legible. */
 
 /* Forzar color y centrado de los títulos dentro de la tarjeta */
 .glass-card .subtitle {
-  color: teal; /* o poner el color que prefieras */
+  color: #67d5e2; /* o poner el color que prefieras */
   text-align: left;
 }
 
@@ -214,5 +249,183 @@ tarjeta siga siendo legible. */
   }
   .glass-card .subtitle {
     font-size: clamp(1rem, 3.5vw, 1.5rem);
+  }
+}
+
+.mini-glass-card {
+  /* Fondo semi-transparente - permite ver a través. Añadimos padding y ancho.
+     Agregamos z-index y posicion para asegurar que el contenedor quede sobre el fondo. */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px; /* ligero fondo para que la tarjeta sea visible */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.5rem; /* espacio interior para que el texto no toque los bordes */
+  width: clamp(500px, 80%, 500px);
+  max-width: 90%;
+  margin: 0 auto; /* centra horizontalmente en la cover */
+  position: relative;
+  z-index: 1;
+
+  /* ¡LA MAGIA DEL GLASSMORPHISM! */
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+
+  /* Borde sutil añade definición */
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  /* Esquinas redondeadas modernas */
+  border-radius: 5px;
+
+  /* Profundidad con sombra interna y externa */
+  box-shadow:
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  /* Asegura contraste adicional en navegadores sin backdrop-filter. 
+  La propiedad CSS backdrop-filter le permite aplicar efectos gráficos 
+  como desenfoque o cambio de color al área detrás de un elemento. 
+  Debido a que se aplica a todo lo que hay detrás del elemento, 
+  para ver el efecto debe hacer que el elemento o su fondo sean 
+  al menos parcialmente transparentes*/
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+}
+.mini-glass-card {
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.mini-glass-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+/* NEW: 5 blocks side-by-side container */
+.five-blocks .grid-5 {
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns equal width */
+  gap: 1rem;
+  max-width: 1200px;
+  align-items: start;
+}
+.five-blocks .grid-5 .block {
+  background: transparent;
+  box-sizing: border-box;
+  padding: 0rem 0.5rem;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: "garamond-italic";
+  font-size: 0.7rem;
+  line-height: 1.5;
+  color: #151515;
+}
+.five-blocks .grid-5 .block h3 {
+  font-family: "garamond-italic";
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #67d5e2;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* Responsive columns: 3 cols (tablet), 2 cols (small), 1 col (mobile) */
+@media (max-width: 1100px) {
+  .five-blocks .grid-5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .five-blocks .grid-5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .five-blocks .grid-5 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.four-blocks .grid-4 {
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns equal width */
+  gap: 1rem;
+  max-width: 1200px;
+  align-items: center;
+  padding: 3rem 2rem;
+  width: clamp(220px, 80%, 900px);
+  max-width: 90%;
+  margin: 0 auto; /* centra horizontalmente en la cover */
+  position: center;
+  z-index: 1;
+}
+.four-blocks .grid-4 .block {
+  background: transparent;
+  box-sizing: border-box;
+  padding: 0rem 0.5rem;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "garamond-italic";
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #67d5e2;
+}
+
+.four-blocks .grid-4 .block h4 {
+  font-family: "garamond-italic";
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #67d5e2;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* Responsive columns: 2 cols (tablet), 2 cols (small), 1 col (mobile) */
+@media (max-width: 1100px) {
+  .four-blocks .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .four-blocks .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .four-blocks .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Fallback para móviles: background-attachment: fixed no es soportado en iOS, usar pseudo-elemento fijo */
+@media (max-width: 767px) {
+  body {
+    background-image: none; /* evitamos duplicado */
+    background-attachment: scroll;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: url("/assets/img/lotus-614421.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    /* si quieres menor opacidad: */
+    /* opacity: 0.9; */
   }
 }
