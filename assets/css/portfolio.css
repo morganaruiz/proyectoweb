@@ -15,7 +15,6 @@ body {
   margin: 0;
   padding: 0;
   font-size: 1.5rem;
-<<<<<<< HEAD
   color: black;
   line-height: 1;
   min-height: var(--viewport-height);
@@ -73,7 +72,7 @@ h2 {
   margin: 2rem 0 0 0;
 }
 
-.contendor {
+.contenedor {
   display: flex;
   gap: 20px;
   max-width: 1200px;
@@ -82,12 +81,55 @@ h2 {
 }
 
 .texto-intro {
-  flex: 0 0 70%;
   font-family: "garamond-italic";
   text-align: justify;
   font-size: 1rem;
   line-height: 1.5;
   color: #151515;
+}
+.right {
+  flex: 0 0 30%;
+  display: flex;
+}
+.right img,
+.icono {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Use a row layout inside the glass-card content */
+.glass-card-content {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+.glass-card-content .left {
+  flex: 0 0 70%;
+  min-width: 0;
+}
+.glass-card-content .right {
+  flex: 0 0 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .glass-card-content {
+    flex-direction: column;
+  }
+  .glass-card-content .left,
+  .glass-card-content .right {
+    flex: 0 0 100%;
+  }
+  .icono,
+  .right img {
+    max-width: 220px;
+  }
 }
 /* no conseguia poner el texto de h1 y h2 
 dentro de la tarjeta de glassmorfismo, 
@@ -173,25 +215,4 @@ tarjeta siga siendo legible. */
   .glass-card .subtitle {
     font-size: clamp(1rem, 3.5vw, 1.5rem);
   }
-=======
-  color:black;
->>>>>>> 921a0b09c2b896d4add2a863c08c736c4493df1c
 }
-
-.cover {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50vh;
-  width: 100%;
-  background: wheat;
-  background-size: cover;
-}
-
-h1 {
-  font-family: "Black Castle";
-  font-size: 5rem;
-  color: darkred;
-  
-}
-
