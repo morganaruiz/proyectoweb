@@ -15,6 +15,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 1.5rem;
+<<<<<<< HEAD
   color: black;
   line-height: 1;
   min-height: var(--viewport-height);
@@ -172,4 +173,25 @@ tarjeta siga siendo legible. */
   .glass-card .subtitle {
     font-size: clamp(1rem, 3.5vw, 1.5rem);
   }
+=======
+  color:black;
+>>>>>>> 921a0b09c2b896d4add2a863c08c736c4493df1c
 }
+
+.cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 100%;
+  background: wheat;
+  background-size: cover;
+}
+
+h1 {
+  font-family: "Black Castle";
+  font-size: 5rem;
+  color: darkred;
+  
+}
+
