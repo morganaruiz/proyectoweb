@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Black Castle";
+  src: url("/assets/fonts/BlackCastleMF.woff2");
+}
+
 html {
   font-size: 16px;
   line-height: 1.6;
@@ -6,7 +11,165 @@ html {
 
 body {
   font-family: "Arial", sans-serif;
-  background-color: wheat;
+  background-image: url("/assets/img/lotus-7491929_1280.jpg");
   margin: 0;
   padding: 0;
+  font-size: 1.5rem;
+  color: black;
+  line-height: 1;
+  min-height: var(--viewport-height);
+  min-width: 320px;
+  overflow-x: hidden;
+  word-wrap: break-word;
+}
+
+.cover {
+  display: flex;
+  flex-direction: column; /* Stack children vertically so h2 appears below h1 */
+  justify-content: center;
+  align-items: center;
+  gap: 0.1rem; /* small space between stacked elements - very short */
+  height: 50vh;
+  width: 100%;
+  background-color: transparent;
+  background-size: cover;
+  margin-top: 5rem;
+}
+
+h1 {
+  font-family: "Aston Script";
+  font-size: 5rem;
+  color: teal;
+  line-height: 1; /* reduce internal leading */
+  margin: 0; /* override default browser margin */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+/* Specific narrower spacing for cover headings. 
+he tenido problemas para reducir la distancia entre 
+el h1 y el h2, así que en la clase de cover he puesto 
+gap: 0.1rem, en el h1 y h2 he puesto margin: 0 y 
+line-height: 1, he añadido una sub clase llamada .cover h1 y h2 
+y he indicado margin: 0. ahora añadiré el media query. */
+.cover h1,
+.cover h2 {
+  margin: 2rem 0 0 0; /* ensure headings inside cover have zero margin */
+}
+h2 {
+  font-family: "garamond-italic";
+  text-align: left;
+  font-size: 3rem;
+  color: teal;
+  margin: 2rem 0 0 0; /* top margin to separate from h1 */
+  line-height: 1;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Title/subtitle classes used in HTML */
+.title {
+  margin: 0 2rem 0 0;
+}
+.subtitle {
+  margin: 2rem 0 0 0;
+}
+
+.contendor {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.texto-intro {
+  flex: 0 0 70%;
+  font-family: "garamond-italic";
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #151515;
+}
+/* no conseguia poner el texto de h1 y h2 
+dentro de la tarjeta de glassmorfismo, 
+directamente no aparecía la tarjeta de glassmorfismo.
+La razón por la que la tarjeta no se apreciaba: 
+la clase .glass-card solo tenía reglas de 
+border/radius/backdrop-filter, sin padding 
+ni anchura visible, por lo que la tarjeta era 
+casi invisible sobre el fondo (además backdrop-filter 
+no es suficiente en navegadores sin soporte).
+Para solucionarlo añadí:
+Padding interior, anchura y centramiento (display:flex y width clamp),:
+.glass-card { display:flex; flex-direction: column; 
+align-items:center; padding:1.25rem 2rem; width: clamp(...); margin:0 auto; }
+Fondo parcialmente opaco para que se perciba sobre la imagen:
+background: rgba(255,255,255,0.18);
+z-index:1 y position: relative para asegurar que 
+la tarjeta esté por encima de elementos de fondo.
+Forcé el color y centrado del texto dentro de la 
+tarjeta: .glass-card .title, .glass-card .subtitle { color: #fff; text-align:center; }
+Añadí media-query para que en pantallas pequeñas la 
+tarjeta siga siendo legible. */
+.glass-card {
+  /* Fondo semi-transparente - permite ver a través. Añadimos padding y ancho.
+     Agregamos z-index y posicion para asegurar que el contenedor quede sobre el fondo. */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px; /* ligero fondo para que la tarjeta sea visible */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem; /* espacio interior para que el texto no toque los bordes */
+  width: clamp(220px, 80%, 800px);
+  max-width: 90%;
+  margin: 0 auto; /* centra horizontalmente en la cover */
+  position: relative;
+  z-index: 1;
+
+  /* ¡LA MAGIA DEL GLASSMORPHISM! */
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+
+  /* Borde sutil añade definición */
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  /* Esquinas redondeadas modernas */
+  border-radius: 20px;
+
+  /* Profundidad con sombra interna y externa */
+  box-shadow:
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  /* Asegura contraste adicional en navegadores sin backdrop-filter. 
+  La propiedad CSS backdrop-filter le permite aplicar efectos gráficos 
+  como desenfoque o cambio de color al área detrás de un elemento. 
+  Debido a que se aplica a todo lo que hay detrás del elemento, 
+  para ver el efecto debe hacer que el elemento o su fondo sean 
+  al menos parcialmente transparentes*/
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+}
+
+/* Forzar color y centrado de los títulos dentro de la tarjeta */
+.glass-card .subtitle {
+  color: teal; /* o poner el color que prefieras */
+  text-align: left;
+}
+
+/* Si quieres la tarjeta más visible en dispositivos pequeños */
+@media (max-width: 420px) {
+  .glass-card {
+    padding: 1rem 1.25rem;
+    width: 94%;
+  }
+  .glass-card .title {
+    font-size: clamp(1.6rem, 5.2vw, 2.25rem);
+  }
+  .glass-card .subtitle {
+    font-size: clamp(1rem, 3.5vw, 1.5rem);
+  }
 }
